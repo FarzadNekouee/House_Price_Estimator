@@ -8,8 +8,6 @@ def client():
 
 def test_predict(client):
     response = client.post('/predict', json={"features": [0.00632, 18.0, 2.31, 0.0, 0.538, 6.575, 65.2, 4.09, 1.0, 296.0, 15.3, 396.9, 4.98]})
-    print("------------", response.get_json())
     assert response.status_code == 200
-
     assert "prediction" in response.get_json()
     
