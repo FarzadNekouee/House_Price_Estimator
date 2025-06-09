@@ -4,7 +4,8 @@ from sklearn.model_selection import train_test_split
 import pickle
 
 def train_and_save_model():
-    # dataset link: https://github.com/shridhar1504/Boston-House-Price-Prediction-Datascience-Project/blob/main/Datasets/Boston%20House%20Price%20Data.csv
+    # dataset link: 
+    # https://github.com/shridhar1504/Boston-House-Price-Prediction-Datascience-Project/blob/main/Datasets/Boston%20House%20Price%20Data.csv
     data = pd.read_csv('Boston_House_Price_Data.csv')
     X = data.drop(columns=["PRICE"]) # eliminate target column
     y = data['PRICE']
